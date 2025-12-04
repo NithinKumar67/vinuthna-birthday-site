@@ -1,5 +1,5 @@
 // ========== CONFIG ==========
-const API_URL = "https://birthday-backend-9yku.onrender.com"; 
+const API_URL = "https://birthday-backend-en92.onrender.com"; 
 // change when you host backend
 
 // ========== IMAGE SLIDER ==========
@@ -401,3 +401,4 @@ function typeEffect() {
 }
 
 typeEffect();
+
