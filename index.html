@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy 19th Birthday, Vinutna Sai 🎉</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+</head>
+<body>
+  <!-- Background effects (behind everything) -->
+  <canvas id="fireworks"></canvas>
+  <div class="bg-gradient"></div>
+  <div class="sparkles"></div>
+  <div class="hearts-container" id="hearts-container"></div>
+
+  <!-- Music -->
+  <audio id="bg-music" src="music/birthday.mp3" loop></audio>
+
+  <!-- Top Navigation -->
+  <header class="top-nav">
+    <div class="logo">👑 Vinutna @ 19</div>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#gallery">Memories</a>
+      <a href="#story">Our Story</a>
+      <a href="#wishes">Wishes</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#thankyou">Thanks</a>
+    </nav>
+    <button id="music-toggle" class="btn-outline">Play Music 🔊</button>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="section hero">
+      <div class="hero-content fade-in">
+        <p class="hero-tag">A Royal Celebration</p>
+        <h1>Happy 19th Birthday<br><span class="script">Princess Vinutna Sai</span></h1>
+        <p class="hero-sub" id="typing-text"></p>
+        <h3 id="countdown" class="countdown"></h3>
+
+        <div class="hero-buttons">
+          <a href="#gallery" class="btn-primary">View Our Memories 💫</a>
+          <a href="#wishes" class="btn-ghost">Read Birthday Wishes 💌</a>
+        </div>
+      </div>
+      <div class="hero-photo-card fade-in">
+        <div class="hero-photo">
+          <img src="images/hero.jpeg" alt="Princess Vinutna Sai">
+        </div>
+        <p class="hero-caption">
+          “On this special day, the princess of our hearts turns <strong>19</strong>.”
+        </p>
+      </div>
+    </section>
+
+    <!-- IMAGE SLIDER / GALLERY -->
+    <section id="gallery" class="section gallery">
+      <h2 class="section-title">Magical Memories ✨</h2>
+      <p class="section-subtitle">
+        Scroll through the moments that made our journey with you so beautiful.
+      </p>
+
+      <div class="slider-container fade-in">
+        <button class="slider-btn prev-btn">&#10094;</button>
+
+        <div class="slider">
+          <div class="slides">
+            <!-- Add more images up to photo40.jpg -->
+            <img src="images/100009.jpeg" class="slide active" alt="Memory 1">
+            <img src="images/100003.jpeg" class="slide" alt="Memory 2">
+            <img src="images/100004.jpeg" class="slide" alt="Memory 3">
+            <img src="images/100005.jpeg" class="slide" alt="Memory 4">
+            <img src="images/100006.jpeg" class="slide" alt="Memory 5">
+            <img src="images/100001.jpeg" class="slide" alt="Memory 6">
+            <img src="images/100007.jpeg" class="slide" alt="Memory 7">
+            <img src="images/100008.jpg" class="slide" alt="Memory 8">
+            <img src="images/100010.jpeg" class="slide" alt="Memory 6">
+            <img src="images/100002.jpeg" class="slide" alt="Memory 7">
+          </div>
+        </div>
+
+        <button class="slider-btn next-btn">&#10095;</button>
+      </div>
+      <div class="slider-dots"></div>
+
+      <!-- Optional photo grid -->
+      <div class="photo-grid fade-in">
+        <img src="images/200001.jpeg" alt="">
+        <img src="images/200002.jpeg" alt="">
+        <img src="images/200003.jpeg" alt="">
+        <img src="images/200004.jpeg" alt="">
+        <img src="images/200005.jpeg" alt="">
+        <img src="images/200006.jpeg" alt="">
+        <img src="images/200007.jpeg" alt="">
+        <img src="images/200008.jpeg" alt="">
+        <img src="images/200009.jpeg" alt="">
+        <img src="images/200010.jpeg" alt="">
+        <img src="images/200011.jpeg" alt="">
+        <img src="images/200012.jpeg" alt="">
+        <img src="images/200013.jpeg" alt="">
+        <img src="images/200014.jpeg" alt="">
+        <img src="images/200015.jpeg" alt="">
+        <img src="images/200016.jpeg" alt="">
+        <img src="images/200017.jpeg" alt="">
+        <img src="images/200018.jpeg" alt="">
+        <img src="images/200019.jpeg" alt="">
+        <img src="images/200020.jpeg" alt="">
+        <img src="images/200021.jpeg" alt="">
+        <img src="images/200022.jpeg" alt="">
+        <img src="images/200023.jpeg" alt="">
+        <img src="images/200024.jpeg" alt="">
+        
+      </div>
+    </section>
+
+    <!-- HER STORY -->
+    <section id="story" class="section">
+      <div class="section-inner fade-in">
+        <h2 class="section-title">How We Found Our Little Princess 👑</h2>
+        <p class="section-subtitle">
+         From our tiny dreamer to the sweetest 19-year-old sunshine.
+        </p>
+        <div class="story-columns">
+          <div class="story-card">
+            <h3>🌷✨ When Our Story Began</h3>
+            <p>
+             1.5 years ago, destiny quietly brought us together… and nothing has been the same since. What started with shy smiles and small talks turned into warm moments, deep comfort, and memories we never want to forget. You didn’t just enter our lives — you added a soft glow to it.
+            </p>
+          </div>
+          <div class="story-card">
+            <h3>🫶🌈 A Friendship That Feels Like Home </h3>
+            <p>
+              Some people pass through life like passing clouds…
+              But you stayed like sunshine.
+              You became the person we trust without thinking, the one we share our random stories with, and the friend who feels more like family than anything else. With every laugh, every conversation, every little memory, you became more special, more precious, more us.
+            </p>
+          </div>
+          <div class="story-card">
+            <h3>👑💖 The Girl Who Became Our Heart</h3>
+            <p>
+              And now your birthday is here, reminding us how lucky we are to have you. You are the softness in our hard days, the energy in our happy days, and the reason our trio feels perfect.
+              You are loved deeply, appreciated honestly, and treasured forever by us.
+              Happy Birthday, our forever princess.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WISHES SECTION -->
+    <section id="wishes" class="section wishes">
+      <div class="section-inner fade-in">
+        <h2 class="section-title">Birthday Wishes for You 💌</h2>
+        <p class="section-subtitle">
+          Some words can’t hold all our love, but here’s a little attempt.
+        </p>
+
+        <!-- WISH SLIDER (auto-rotating wishes) -->
+        <div class="wish-slider">
+          <div id="wish-slider-inner">
+            <!-- JS will fill slides here -->
+          </div>
+        </div>
+
+        <!-- Wish form -->
+        <div class="wish-form">
+          <h3>Leave Your Wish 🎉</h3>
+          <input type="text" id="wish-name" placeholder="Your Name" required>
+          <textarea id="wish-message" placeholder="Your Message" required></textarea>
+          <button class="btn-primary" id="wish-submit-btn">Send Wish 💌</button>
+          <p class="wish-status" id="wish-status"></p>
+        </div>
+
+        <!-- All wishes list -->
+        <div id="all-wishes" class="wishes-grid">
+          <!-- JS will render wish cards here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE SECTION -->
+    <section id="timeline" class="section timeline">
+      <div class="section-inner fade-in">
+        <h2 class="section-title">🌟 Your Little Journey — The Girl Who Inspires Us</h2>
+        <p class="section-subtitle">
+         Just a few moments that shaped the strong, kind, soft-hearted person you are.
+        </p>
+        <div class="timeline-line">
+          <div class="timeline-item">
+            <div class="dot"></div>
+            <h3>✨ A Gentle Beginning</h3>
+            <p>
+              A girl born with kindness in her eyes and strength in her smile.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="dot"></div>
+            <h3>📚 Growing Through School</h3>
+            <p>
+             Sweet memories, small wins, good friends — all the tiny things that shaped your soft but strong heart.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="dot"></div>
+            <h3>💛 Becoming You</h3>
+            <p>
+              In just 2 years of knowing you, we’ve seen how understanding, brave, and warm you truly are. You carry strength quietly and softness beautifully.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="dot"></div>
+            <h3>👑 Turning 19</h3>
+            <p>
+              A new chapter filled with more confidence, more dreams, and more reasons for the world to adore you.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BIG QUOTE SECTION -->
+    <section class="section quote-section">
+      <div class="quote-card fade-in">
+        <p class="big-quote">
+          “Time may move forward, but you’ll forever remain the most beautiful part of our journey.”
+        </p>
+        <p class="quote-author">— From the heart 💞</p>
+      </div>
+    </section>
+
+    <!-- THANK YOU / END SECTION -->
+    <section id="thankyou" class="section thankyou">
+      <div class="section-inner fade-in">
+        <h2 class="section-title">And Finally… 🎀</h2>
+        <p class="section-subtitle">
+          This page is just a tiny gift, compared to the happiness you’ve given us.
+        </p>
+        <p class="thankyou-text">
+          Happy 18th Birthday, <strong>Vinutna Sai</strong> 💖<br>
+          May your life always shine brighter than the candles on your cake,
+          and may you never forget how loved you are — today, tomorrow, and always.
+        </p>
+        <p class="thankyou-text">
+          Scroll back up anytime to relive these memories and remember:
+          <br><strong>You are, and will always be, our princess. 👑</strong>
+        </p>
+        <a href="#hero" class="btn-primary back-top">Back to Top ⬆️</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Music popup -->
+  <div id="music-popup" class="music-popup hidden">
+    <div class="popup-box">
+      <h3>🎶 Do you want to play background music?</h3>
+      <button id="music-yes" class="btn-primary">Yes 🎧</button>
+      <button id="music-no" class="btn-ghost">No 🙅‍♂️</button>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
