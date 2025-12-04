@@ -1,7 +1,6 @@
 // ========== CONFIG ==========
-const API = "https://birthday-backend-9yku.onrender.com"
-
- // change when you host backend
+const API_URL = "https://birthday-backend-9yku.onrender.com"; 
+// change when you host backend
 
 // ========== IMAGE SLIDER ==========
 const slides = document.querySelectorAll(".slide");
@@ -43,25 +42,16 @@ if (slides.length > 0 && prevBtn && nextBtn && dotsContainer) {
     updateSlider();
   }
 
-  prevBtn.addEventListener("click", () => {
-    goToSlide(currentIndex - 1);
-  });
-
-  nextBtn.addEventListener("click", () => {
-    goToSlide(currentIndex + 1);
-  });
+  prevBtn.addEventListener("click", () => goToSlide(currentIndex - 1));
+  nextBtn.addEventListener("click", () => goToSlide(currentIndex + 1));
 
   // Auto-play
-  let autoPlay = setInterval(() => {
-    goToSlide(currentIndex + 1);
-  }, 5000);
+  let autoPlay = setInterval(() => goToSlide(currentIndex + 1), 5000);
 
   const slider = document.querySelector(".slider");
   slider.addEventListener("mouseenter", () => clearInterval(autoPlay));
   slider.addEventListener("mouseleave", () => {
-    autoPlay = setInterval(() => {
-      goToSlide(currentIndex + 1);
-    }, 5000);
+    autoPlay = setInterval(() => goToSlide(currentIndex + 1), 5000);
   });
 }
 
@@ -136,7 +126,7 @@ async function loadWishes() {
       allWishesContainer.appendChild(card);
     });
 
-    // render slider
+    // slider
     wishSliderInner.innerHTML = "";
     wishes.slice(0, 10).forEach((w, idx) => {
       const slide = document.createElement("div");
@@ -210,11 +200,9 @@ function escapeHtml(str) {
     .replace(/'/g, "&#039;");
 }
 
-if (submitBtn) {
-  submitBtn.addEventListener("click", sendWish);
-}
+if (submitBtn) submitBtn.addEventListener("click", sendWish);
 
-// initial load
+// Load wishes on start
 loadWishes();
 
 // ========== Floating hearts animation ==========
@@ -224,9 +212,7 @@ function createHeart() {
   heart.style.left = Math.random() * 100 + "vw";
   heart.style.top = "100vh";
   heart.style.animationDuration = 3 + Math.random() * 3 + "s";
-
   document.getElementById("hearts-container").appendChild(heart);
-
   setTimeout(() => heart.remove(), 6000);
 }
 
@@ -239,12 +225,9 @@ function createBalloon() {
   setTimeout(() => balloon.remove(), 8000);
 }
 setInterval(createBalloon, 1500);
-
-
-// a bit slower to reduce CPU and avoid any micro-jitter
 setInterval(createHeart, 1200);
 
-// ========== Fireworks background effect ==========
+// ========== Fireworks Background ==========
 console.log("Canvas:", document.getElementById("fireworks"));
 const canvasFW = document.getElementById("fireworks");
 const ctxFW = canvasFW.getContext("2d");
@@ -256,7 +239,6 @@ function resizeFW() {
 resizeFW();
 window.addEventListener("resize", resizeFW);
 
-// Firework particle constructor
 class Particle {
   constructor(x, y, color, velocity) {
     this.x = x;
@@ -317,16 +299,13 @@ function animateFW() {
   });
 }
 
-
 animateFW();
 
-// Auto launch
 setInterval(() => {
   explode(Math.random() * canvasFW.width, Math.random() * canvasFW.height / 2);
 }, 800);
 
-
-// ========== Music popup handling ==========
+// ========== Music popup ==========
 const musicPopup = document.getElementById("music-popup");
 const musicYes = document.getElementById("music-yes");
 const musicNo = document.getElementById("music-no");
@@ -361,7 +340,7 @@ function countdownTimer() {
   const countdownEl = document.getElementById("countdown");
   if (!countdownEl) return;
 
-  const eventDay = new Date("dec 5, 2025 00:00:00").getTime(); // change date if needed
+  const eventDay = new Date("dec 5, 2025 00:00:00").getTime();
   const now = new Date().getTime();
   const diff = eventDay - now;
 
@@ -382,7 +361,7 @@ function countdownTimer() {
 setInterval(countdownTimer, 1000);
 countdownTimer();
 
-// ========== Typing animation effect ==========
+// ========== Typing animation ==========
 const typingElement = document.getElementById("typing-text");
 const phrases = [
   "Today the world shines brighter ✨",
